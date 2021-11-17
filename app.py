@@ -6,7 +6,7 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.DEBUG)
 
 @app.route("/")
-async def main():
+def index():
     logging.info(request.json)
 
     response = {
