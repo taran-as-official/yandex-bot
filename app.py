@@ -4,6 +4,7 @@ import logging
 app = Flask(__name__)
 
 logging.basicConfig(level=logging.DEBUG)
+logging.info("Зашли в app.py")
 
 @app.route("/echo")
 def index():
@@ -22,3 +23,7 @@ def index():
     logging.info(request.json)
     return json.dumps(response)
 
+if __name__ == '__main__':
+    ogging.info("Зашли в app.run")
+    app.run()
+    
