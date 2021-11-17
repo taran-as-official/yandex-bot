@@ -5,9 +5,10 @@ app = Flask(__name__)
 
 logging.basicConfig(level=logging.DEBUG)
 
-@app.route("/")
+@app.route("/echo")
 def index():
     logging.info(request.json)
+    print(request.json)
 
     response = {
         "version": request.json["version"],
