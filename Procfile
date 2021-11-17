@@ -1,1 +1,1 @@
-web: aapp index
+web: python app
