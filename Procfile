@@ -1,1 +1,1 @@
-web: aapp main
+heroku ps:scale web=1
