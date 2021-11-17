@@ -7,17 +7,18 @@ logging.basicConfig(level=logging.DEBUG)
 
 @app.route("/echo")
 def index():
-    logging.info(request.json)
-    print(request.json)
+    logging.info("Запрос от Алисы: " + request.json)
+    print("Запрос от Алисы (print): " +request.json)
 
     response = {
-        "version": request.json["version"],
+        
         "session": request.json["session"],
         "response": {
             "end_session": False
-        }
+        },
+        "version": request.json["version"]
     }
-    response["response"]["text"] = "Привет"
-
+    response["response"]["text"] = 'Привет'
+    logging.info(request.json)
     return json.dumps(response)
 
