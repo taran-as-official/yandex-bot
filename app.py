@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 
 @app.route('/echo', methods=['POST'])
-def index():
+def yandex_echo():
 
     response = {
         
@@ -21,5 +21,10 @@ def index():
     }
 
     return json.dumps(response)
+
+@app.route('/')
+def index():
+
+    return "<p>Hello, World!</p>"
 
 
